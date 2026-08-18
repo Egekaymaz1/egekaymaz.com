@@ -1,21 +1,49 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/\~and\~/g, '&');
+          });
+          window.history.replaceState(
+            null, null,
+            decoded.shift() + (decoded.length ? '?' + decoded.join('&') : '') + l.hash
+          );
+        }
+      }(window.location));
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <title>Ege Kaymaz</title>
-    
+
+    <meta
+      name="description"
+      content="Ege Kaymaz — Game Designer, Game Developer and Narrative Designer."
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Ege Kaymaz" />
+    <meta
+      property="og:description"
+      content="Ege Kaymaz — Game Designer, Game Developer and Narrative Designer."
+    />
     <meta name="description" content="This web application streamlines project planning by allowing users to create, manage, and share detailed project outlines and examples for effective collaboration.">
     <meta name="robots" content="noindex, nofollow">
     <meta property="og:title" content="Ege Kaymaz">
     <meta property="og:description" content="This web application streamlines project planning by allowing users to create, manage, and share detailed project outlines and examples for effective collaboration.">
-    <script type="module" crossorigin src="/assets/index-q-KAeqXj.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B8msDXr0.css">
+    <script type="module" crossorigin src="/assets/index-_pTTTR60.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-4B03Buhk.css">
   </head>
+
   <body>
-    
     <div id="root"></div>
-    
+
   </body>
 </html>
